@@ -4,11 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
   </head>
   <body>
+    <header class="header">
+      <div class="popup">
+        <div class="popup__box">
+          <h3 class="popup__text-main">TEST</h3>
+          <button class="btn btn__reset">Play again!</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <container class="game__container">
+        <div class="game__init">
+          <div class="game__text">
+            <h1 class="text__main">What you'll bring to fight?</h1>
+            <h3 class="text__secondary">First to 5 points wins the game!</h3>
+          </div>
+          <!-- ✌✋✊ -->
+          <div class="game__display">
+            <div class="player-choice">❔</div>
+            <div class="vs">VS</div>
+            <div class="computer-choice">❔</div>
+            <div class="score player">
+              Player: <span class="player-score">0</span>
+            </div>
+            <div class="score computer">
+              Computer: <span class="computer-score">0</span>
+            </div>
+          </div>
+        </div>
 
-    
+        <div class="game__choices">
+          <div class="choice choice-1">✊</div>
+          <div class="choice choice-2">✋</div>
+          <div class="choice choice-3">✌</div>
+        </div>
+      </container>
+    </main>
+    <footer class="footer"></footer>
   </body>
 </html>

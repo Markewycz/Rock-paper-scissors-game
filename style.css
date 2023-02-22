@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Mynerve", cursive;
+  font-size: 2rem;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1b1b1b;
+  user-select: none;
+}
+
+/* .header {
+  text-align: center;
+  background-color: #333;
+  width: 100%;
+} */
+
+.game__container {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  margin-top: 5rem;
+  width: fit-content;
+}
+
+.game__init {
+  text-align: center;
+  width: 100%;
+}
+.game__text {
+  text-align: center;
+  display: inline-block;
+  padding: 2rem;
+  text-shadow: 0 1rem 4rem rgba(153, 153, 153, 0.7);
+}
+
+.game__display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 4rem;
+  place-items: center;
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+  margin-top: 4rem;
+  font-size: 3rem;
+  transition: all 0.2s;
+}
+.computer {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.player-choice,
+.computer-choice {
+  font-size: 7rem;
+  background-color: #333;
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 3px;
+  border: 1px solid #474747;
+}
+.score {
+  text-shadow: 0 1rem 4rem rgba(153, 153, 153, 0.5);
+}
+
+.game__choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 3rem;
+  padding: 10rem 3rem;
+}
+
+.choice {
+  display: grid;
+  place-content: center;
+  background-color: #333;
+  width: 15rem;
+  height: 20rem;
+  font-size: 10rem;
+  border-radius: 5px;
+  border: 1px solid #474747;
+  box-shadow: 0 1rem 2rem rgb(0, 0, 0, 0.3);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.choice:hover {
+  transform: translateY(-0.7rem);
+  box-shadow: 0 1.5rem 2rem rgb(0, 0, 0, 0.3);
+}
+
+/* POPUP */
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  z-index: 1000;
+}
+
+.popup__box {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  border-radius: 3px;
+  background-color: #2b2b2b;
+}
+
+.popup__text-main {
+  text-align: center;
+  width: 70%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 1rem 4rem rgba(153, 153, 153, 0.9);
+}
+
+.btn {
+  border: none;
+  background-color: #252422;
+  color: #ffffff;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: "Mynerve", cursive;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.6);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 1rem 1.5rem rgb(0, 0, 0, 0.6);
+}
+
+.winner {
+  transform: translateY(-1rem);
+}
